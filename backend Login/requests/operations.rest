@@ -1,0 +1,15 @@
+GET http://localhost:3001/api/notes/6194af7be724dab14695
+
+
+###
+
+DELETE http://localhost:3001/api/notes/6203cb96a8be7226ee5d849c
+
+###
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+    "content" : "Who the hell is root! Only I will post new note",
+    "userId" : "620a962bacc244064d26c251"
+}
