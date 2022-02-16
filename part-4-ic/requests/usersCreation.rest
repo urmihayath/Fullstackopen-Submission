@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username" : "ab",
+    "name" : "Mateo Boca",
+    "password" : "fghfff"
+}
+
+###
+
+DELETE http://localhost:3003/api/users/620cbeafeb7beabfa8d68d7a

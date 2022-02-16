@@ -1,0 +1,13 @@
+GET http://localhost:3003/api/blogs
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Hello Hello Mic in testing",
+  "author": "MD Zillur Rahman",
+  "url": "www.google.com/zillurTheBest",
+  "likes": 75
+}
