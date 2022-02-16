@@ -6,8 +6,13 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "title": "Hello Hello Mic in testing",
-  "author": "MD Zillur Rahman",
-  "url": "www.google.com/zillurTheBest",
-  "likes": 75
+  "title": "I am a fan of Real Madrid",
+  "author": "Mateo Messi",
+  "url": "http://messimybaap.es",
+  "likes": 114,
+  "userId" : "620cb7392de178642986657f"
 }
+
+###
+
+DELETE http://localhost:3003/api/blogs/620d0296ed106ea647d5fb65
