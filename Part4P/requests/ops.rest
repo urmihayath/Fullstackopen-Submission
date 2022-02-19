@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name" : "Chick Chicken",
+    "number" : "01710101",
+    "userId" : "6210b7faf74c5450cf5e0156"
+}
+
+
+###
+DELETE http://localhost:3001/api/persons/6210b3d0acf8cd1db1dd9a85

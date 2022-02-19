@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username" : "Sama",
+    "name" : "Zillside",
+    "password" : "12345"
+}
+
+###
+
+DELETE http://localhost:3001/api/users/6210a981983702f9bb1d2fcc
