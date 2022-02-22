@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const User = require("../models/users");
 const loginRouter = require("express").Router();
+const User = require("../models/user");
 
-loginRouter.post("/", async (request, response, next) => {
+loginRouter.post("/", async (request, response) => {
   const { username, password } = request.body;
 
   const user = await User.findOne({ username });
@@ -12,7 +12,7 @@ loginRouter.post("/", async (request, response, next) => {
 
   if (!(user && passwordCorrect)) {
     return response.status(401).json({
-      error: "Invalid username or password",
+      error: "invalid username or password",
     });
   }
 
@@ -21,13 +21,13 @@ loginRouter.post("/", async (request, response, next) => {
     id: user._id,
   };
 
-  const token = jwt.sign(userForToken, process.env.SECRET);
-
-  response.status(200).send({
-    token,
-    username: user.username,
-    name: user.name,
+  const token = jwt.sign(userForToken, process.env.SECRET, {
+    expiresIn: 60 * 60,
   });
+
+  response
+    .status(200)
+    .send({ token, username: user.username, name: user.name });
 });
 
 module.exports = loginRouter;

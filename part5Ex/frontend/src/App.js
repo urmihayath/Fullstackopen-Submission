@@ -27,6 +27,7 @@ function App() {
 
     if (loggedUser) {
       const user = JSON.parse(loggedUser);
+      blogService.setToken(user.token);
       setUser(user);
     }
   }, []);
@@ -36,7 +37,7 @@ function App() {
 
     try {
       const user = await loginService.login({ username, password });
-      blogService.setToken(user.token);
+      // blogService.setToken(user.token);
       setUser(user);
       setUsername("");
       setPassword("");

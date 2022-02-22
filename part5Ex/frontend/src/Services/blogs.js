@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "http://localhost:3003/api/blogs";
+const baseUrl = "/api/blogs";
 
 let token = null;
 const setToken = (newToken) => {
@@ -16,7 +16,7 @@ const create = async (newObject) => {
   const config = { headers: { Authorization: token } };
   const response = await axios.post(baseUrl, newObject, config);
 
-  return response.data;
+  return response;
 };
 
 export default { getAll, create, setToken };
