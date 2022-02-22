@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username" : "mourisalam95",
+    "name" : "Salma Tabassum Mouri",
+    "password" : "1998"
+}
+
+###
+
+DELETE http://localhost:3003/api/users/620cbeafeb7beabfa8d68d7a

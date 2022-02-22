@@ -1,0 +1,18 @@
+GET http://localhost:3003/api/blogs
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vdXJpc2FsYW05NSIsImlkIjoiNjIwY2Y5MGU2NDJkNTVkMzFmZTk3MDFkIiwiaWF0IjoxNjQ1MDIzMTQ0fQ.p-X2CrWD-cJELUdCSpI5MNWoVwDYKFZlravOGo40XV8
+
+{
+  "title": "I am a fan of nobody",
+  "author": "Salma Tabassum Mouri",
+  "url": "http://mywebsite.nl",
+  "likes": 11
+}
+
+###
+
+DELETE http://localhost:3003/api/blogs/620d0296ed106ea647d5fb65
