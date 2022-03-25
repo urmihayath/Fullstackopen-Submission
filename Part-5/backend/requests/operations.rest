@@ -1,0 +1,28 @@
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title" : "I love vajapora",
+    "author" : "Moumoni",
+    "url" : "www.vajapora.se",
+    "likes" : 198
+}
+
+###
+DELETE http://localhost:3003/api/blogs/620cfb009ffd05b17537559f
+
+###
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbXkiLCJpZCI6IjYyM2FlNGVhZGIxYWE1ZGFmOGYyZDhiNiIsImlhdCI6MTY0ODAyOTE4M30.FVioVfodWaWNgAi6v1yHzw8e2562-i4dhd8eICaPs9w
+
+{
+    "title" : "CSE CSE CSE",
+    "author" : "Samy",
+    "url" : "www.c.se",
+    "likes" : 13,
+    "userId": "623ae4eadb1aa5daf8f2d8b6"
+}
